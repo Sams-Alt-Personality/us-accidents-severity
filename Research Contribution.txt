@@ -1,0 +1,25 @@
+PROBLEM / GAP BEING ADDRESSED
+
+Base paper: Tang et al. (2025), "Research on Traffic Accident Severity Level
+Prediction Model Based on Improved Machine Learning", Systems, 13(1), 31.
+It predicts accident severity on the Kaggle US Accidents dataset using
+Decision Tree, XGBoost and Random Forest, with resampling for class imbalance.
+Its feature set is built from weather, road and location variables, and it
+does not report engineering time-based features.
+
+Gap: Time of day, day of week and season are well-established risk factors in
+the traffic safety literature, but they are not explicitly engineered or
+evaluated in the base paper. The base paper also reports only overall accuracy,
+recall and F1, which are dominated by the majority class (about 92% of
+accidents are Severity 2). Performance on the rare, more serious classes
+(Severity 1, 3 and 4) is not examined.
+
+Our contribution: We add temporal features (hour, day of week, month, season,
+weekend flag, rush-hour flag) to the same model family on the same dataset and
+test their effect in a controlled ablation, with and without SMOTE
+oversampling, using macro-averaged metrics and per-class recall.
+
+Result (Random Forest): Adding temporal features raised macro F1 from 0.553 to
+0.588 and Severity-1 recall from 0.527 to 0.705. Combined with SMOTE, macro F1
+reached 0.594, Severity-1 recall 0.826, and Severity-4 recall rose from 0.054
+to 0.156. Severity 4 remains the hardest class to detect.
