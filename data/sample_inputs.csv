@@ -1,0 +1,2 @@
+Start_Lat,Start_Lng,State,Timezone,Temperature(F),Wind_Chill(F),Humidity(%),Pressure(in),Visibility(mi),Wind_Direction,Wind_Speed(mph),Precipitation(in),Weather_Condition,Amenity,Bump,Crossing,Give_Way,Junction,No_Exit,Railway,Roundabout,Station,Stop,Traffic_Calming,Traffic_Signal,Turning_Loop,Sunrise_Sunset,Civil_Twilight,Nautical_Twilight,Astronomical_Twilight,Month,Hour,DayOfWeek,Is_Weekend,Season,Is_Rush_Hour
+45.117418,-93.479607,MN,US/Central,35.0,26.0,89.0,28.72,9.0,E,13.0,0.0,Cloudy,0,0,0,0,0,0,0,0,0,0,0,0,0,Night,Day,Day,Day,12,7,2,0,Winter,1
